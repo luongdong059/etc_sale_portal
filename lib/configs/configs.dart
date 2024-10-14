@@ -30,7 +30,6 @@ class AppConfigs {
   Future<void> setup() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    await PermissionChecker.initPermission();
 
     // Set device orientation to portrait-only
     await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
@@ -90,18 +89,18 @@ extension FlavorExtension on Flavor {
       case Flavor.MAX:
         return FlavorValues(
             appName: 'ETC Sale Portal',
-            url: 'https://www.azurespeed.com/Azure/UploadLargeFile',
+            url: 'https://dms-etc-max.smartinnotech.io/vi/sale',
             isDebugEnabled: true);
       case Flavor.ETC:
         return FlavorValues(
             appName: 'ETC Sale Portal',
-            url: 'https://dms-etc.smartinnotech.io/sale',
+            url: 'https://dms-etc.smartinnotech.io/vi/sale',
             isDebugEnabled: true);
 
       default:
         return FlavorValues(
             appName: 'ETC Sale Portal',
-            url: 'https://dms-etc-max.smartinnotech.io/sale',
+            url: 'https://dms-etc-max.smartinnotech.io/vi/sale',
             isDebugEnabled: false);
     }
   }
